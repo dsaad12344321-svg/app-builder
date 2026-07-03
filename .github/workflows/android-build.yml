@@ -1,0 +1,56 @@
+name: Build Android
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        adnetwork: [Admob, Applovin]
+    defaults:
+      run:
+        working-directory: android
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: gradle
+
+      - name: Make gradlew executable
+        run: chmod +x gradlew
+
+      - name: Build debug APK (${{ matrix.adnetwork }})
+        run: ./gradlew assembleNormal${{ matrix.adnetwork }}Debug
+
+      - name: Build release AAB (${{ matrix.adnetwork }})
+        run: ./gradlew bundleNormal${{ matrix.adnetwork }}Release || true
+
+      - name: List outputs
+        run: |
+          echo "== APKs =="; find app/build/outputs -name "*.apk" || true
+          echo "== AABs =="; find app/build/outputs -name "*.aab" || true
+
+      - name: Upload APK (${{ matrix.adnetwork }})
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-${{ matrix.adnetwork }}-APK
+          path: android/app/build/outputs/apk/**/*.apk
+          if-no-files-found: warn
+
+      - name: Upload AAB (${{ matrix.adnetwork }})
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-${{ matrix.adnetwork }}-AAB
+          path: android/app/build/outputs/bundle/**/*.aab
+          if-no-files-found: warn
