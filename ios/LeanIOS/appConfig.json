@@ -1,0 +1,412 @@
+{
+  "general": {
+    "initialUrl": "https://daleelakelbankynolink.vercel.app/",
+    "appName": "\u062f\u0644\u064a\u0644\u0643 \u0627\u0644\u0628\u0646\u0643\u0649",
+    "userAgentAdd": "median",
+    "publicKey": "eekraob",
+    "deviceRegKey": "bbw3g26vrmybwtnwn0ehvvg2t8",
+    "forceUserAgent": "",
+    "enableWindowOpen": true,
+    "userAgentRegexes": [],
+    "replaceStrings": [],
+    "screenOrientation": {
+      "iphone": null,
+      "ipad": null,
+      "androidPhone": null,
+      "androidTablet": null
+    },
+    "nativeBridgeUrls": [],
+    "languages": [],
+    "iosBundleId": "co.median.ios.eekraob",
+    "androidPackageName": "co.median.android.eekraob",
+    "keepScreenOn": null,
+    "iosUserAgentAdd": "median",
+    "iosForceUserAgent": "",
+    "androidUserAgentAdd": "median",
+    "androidForceUserAgent": "",
+    "androidSigningKey": "release",
+    "injectMedianJS": true,
+    "forceSessionCookieExpiry": 0,
+    "iosCustomHeaders": {},
+    "androidCustomHeaders": {},
+    "version": 2
+  },
+  "navigation": {
+    "androidPullToRefresh": false,
+    "iosPullToRefresh": true,
+    "androidShowOfflinePage": true,
+    "iosShowOfflinePage": true,
+    "iosConnectionOfflineTime": 10,
+    "androidConnectionOfflineTime": 10,
+    "toolbarNavigation": {
+      "enabled": false,
+      "visibilityByPages": "allPages",
+      "visibilityByBackButton": "backButtonActive",
+      "regexes": [
+        {
+          "enabled": true,
+          "regex": ".*"
+        }
+      ],
+      "items": [
+        {
+          "system": "back",
+          "titleType": "defaultText",
+          "visibility": "allPages",
+          "urlRegex": [
+            {
+              "enabled": true,
+              "regex": ".*"
+            }
+          ]
+        },
+        {
+          "system": "refresh",
+          "enabled": false,
+          "visibility": "allPages",
+          "urlRegex": [
+            {
+              "enabled": true,
+              "regex": ".*"
+            }
+          ]
+        },
+        {
+          "system": "forward",
+          "enabled": false,
+          "titleType": "defaultText",
+          "visibility": "allPages",
+          "urlRegex": [
+            {
+              "enabled": true,
+              "regex": ".*"
+            }
+          ]
+        }
+      ]
+    },
+    "actionConfig": {
+      "actions": [],
+      "actionSelection": [],
+      "active": true
+    },
+    "deepLinkDomains": {
+      "domains": [],
+      "enableAndroidApplinks": false
+    },
+    "androidShowRefreshButton": false,
+    "iosShowRefreshButton": false,
+    "tabNavigation": {
+      "tabSelectionConfig": [],
+      "tabMenus": [],
+      "active": false
+    },
+    "sidebarNavigation": {
+      "menuSelectionConfig": {
+        "redirectLocations": [
+          {
+            "regex": ".*",
+            "menuName": "default",
+            "loggedIn": true
+          }
+        ]
+      },
+      "menus": [
+        {
+          "active": false,
+          "name": "default",
+          "items": [
+            {
+              "url": "https://daleelakelbankynolink.vercel.app/",
+              "label": "\u0634\u0647\u0627\u062f\u0627\u062a \u0627\u0644\u0627\u062f\u062e\u0627\u0631",
+              "subLinks": []
+            },
+            {
+              "url": "https://daleelakelbankynolink.vercel.app/deposits",
+              "label": "\u0627\u0644\u0648\u062f\u0627\u0626\u0639",
+              "subLinks": []
+            },
+            {
+              "url": "https://daleelakelbankynolink.vercel.app/treasury-bills",
+              "label": "\u0623\u0630\u0648\u0646 \u0627\u0644\u062e\u0632\u0627\u0646\u0629",
+              "subLinks": []
+            },
+            {
+              "url": "https://daleelakelbankynolink.vercel.app/loans",
+              "label": "\u0627\u0644\u0642\u0631\u0648\u0636",
+              "subLinks": []
+            }
+          ]
+        }
+      ]
+    },
+    "regexInternalExternal": {
+      "rules": [
+        {
+          "regex": "^(?!https?://).*",
+          "mode": "external",
+          "label": "Non-web links",
+          "pagesToTrigger": "custom"
+        },
+        {
+          "regex": "https?://([-\\w]+\\.)*facebook\\.com.*",
+          "mode": "appbrowser",
+          "label": "Facebook",
+          "pagesToTrigger": "custom"
+        },
+        {
+          "regex": "https?://([\\-\\w]+\\.)*(twitter|x)\\.com/.*",
+          "mode": "appbrowser",
+          "label": "Twitter/X",
+          "pagesToTrigger": "custom"
+        },
+        {
+          "regex": "https?://([-\\w]+\\.)*instagram\\.com/.*",
+          "mode": "appbrowser",
+          "label": "Instagram",
+          "pagesToTrigger": "custom"
+        },
+        {
+          "regex": "https?://maps\\.google\\.com.*",
+          "mode": "appbrowser",
+          "label": "Google Maps",
+          "pagesToTrigger": "custom"
+        },
+        {
+          "regex": "https?://([-\\w]+\\.)*google\\.com/maps/search/.*",
+          "mode": "appbrowser",
+          "label": "Google Maps Search",
+          "pagesToTrigger": "custom"
+        },
+        {
+          "regex": "https?://([-\\w]+\\.)*linkedin\\.com/.*",
+          "mode": "appbrowser",
+          "label": "LinkedIn",
+          "pagesToTrigger": "custom"
+        },
+        {
+          "regex": "https?://login\\.microsoftonline\\.com.*",
+          "mode": "internal",
+          "label": "Microsoft Login",
+          "pagesToTrigger": "custom"
+        },
+        {
+          "regex": "https?:\\/\\/([-\\w]+\\.)*vercel.app(\\/.*)?$",
+          "mode": "internal",
+          "label": "All pages on my domain",
+          "pagesToTrigger": "domain"
+        },
+        {
+          "regex": ".*",
+          "mode": "appbrowser",
+          "label": "All Other Links",
+          "pagesToTrigger": "all"
+        }
+      ],
+      "active": true
+    },
+    "navigationLevels": {
+      "active": true,
+      "levels": []
+    },
+    "navigationTitles": {
+      "active": true,
+      "titles": []
+    },
+    "redirects": [],
+    "ignorePageFinishedRegexes": [],
+    "iosSettings": {},
+    "swipeGestures": null,
+    "maxWindows": {
+      "enabled": false,
+      "numWindows": 5,
+      "autoClose": false
+    }
+  },
+  "styling": {
+    "icon": "https://s3.amazonaws.com/gonativeio/app_files/eekraob/app_icon_android.png",
+    "navigationTitleImage": false,
+    "transitionInteractiveDelayMax": 0.2,
+    "menuAnimationDuration": 0.15,
+    "showNavigationBar": false,
+    "iosDarkMode": "auto",
+    "iosTintColor": "#0E0D08",
+    "iosTintColorDark": "#ffffff",
+    "iosTitleColor": "#0E0D08",
+    "iosTitleColorDark": "#ffffff",
+    "iosStatusBarBackgroundColor": "#ffffffff",
+    "iosStatusBarBackgroundColorDark": "#000000",
+    "iosEnableBlurInStatusBar": false,
+    "iosSidebarFont": "Default",
+    "iosSidebarTextColor": "#0E0D08",
+    "iosSidebarTextColorDark": "#ffffff",
+    "iosSidebarBackgroundColor": "#f8f8f8",
+    "iosSidebarBackgroundColorDark": "#202020",
+    "iosNavigationBarTintColor": "#f8f8f8",
+    "iosNavigationBarTintColorDark": "#202020",
+    "iosTabBarTintColor": "#f8f8f8",
+    "iosTabBarTintColorDark": "#000000",
+    "iosTabBarInactiveColor": "#A1A1A1",
+    "iosTabBarInactiveColorDark": "#818181",
+    "iosHeaderImage": "https://s3.amazonaws.com/gonativeio/app_files/eekraob/app_icon_android.png",
+    "iosTheme": "default",
+    "showActionBar": false,
+    "androidBackgroundColor": "#FFFFFF",
+    "androidBackgroundColorDark": "#333333",
+    "androidSidebarBackgroundColor": "#FFFFFF",
+    "androidSidebarBackgroundColorDark": "#333333",
+    "androidSidebarForegroundColor": "#1A100B",
+    "androidSidebarForegroundColorDark": "#FFFFFF",
+    "androidSidebarSeparatorColor": "#CCCCCC",
+    "androidSidebarSeparatorColorDark": "#666666",
+    "androidSidebarHighlightColor": "#1A100B",
+    "androidSidebarHighlightColorDark": "#FFFFFF",
+    "androidShowLogoInSideBar": true,
+    "androidShowAppNameInSideBar": true,
+    "androidStatusBarBackgroundColor": "#5C5C5C",
+    "androidStatusBarBackgroundColorDark": "#333333",
+    "androidActionBarBackgroundColor": "#FFFFFF",
+    "androidActionBarBackgroundColorDark": "#333333",
+    "androidActionBarForegroundColor": "#1A100B",
+    "androidActionBarForegroundColorDark": "#FFFFFF",
+    "androidAccentColor": "#009688",
+    "androidAccentColorDark": "#80cbc4",
+    "androidSystemNavBarColor": "#FFFFFF",
+    "androidSystemNavBarColorDark": "#000000",
+    "androidTheme": "auto",
+    "androidHideTitleInActionBar": false,
+    "androidPullToRefreshColor": "#1A100B",
+    "androidPullToRefreshColorDark": "#FFFFFF",
+    "disableAnimations": false,
+    "androidTabBarTextColor": "#949494",
+    "androidTabBarTextColorDark": "#FFFFFF",
+    "androidTabBarBackgroundColor": "#FFFFFF",
+    "androidTabBarBackgroundColorDark": "#333333",
+    "androidTabBarIndicatorColor": "#1A100B",
+    "androidTabBarIndicatorColorDark": "#666666",
+    "androidTabPressedBackgroundColor": "#CCCCCC",
+    "androidTabPressedBackgroundColorDark": "#999999",
+    "androidSwipeNavigationBackgroundColor": "#FFFFFF",
+    "androidSwipeNavigationBackgroundColorDark": "#333333",
+    "androidSwipeNavigationActiveColor": "#000000",
+    "androidSwipeNavigationActiveColorDark": "#FFFFFF",
+    "androidSwipeNavigationInactiveColor": "#666666",
+    "androidSwipeNavigationInactiveColorDark": "#666666",
+    "androidWebviewTextZoom": null,
+    "hideWebviewAlpha": 0.5,
+    "splashScreen": {
+      "ios": {
+        "backgroundColor": "#FFFFFF",
+        "backgroundColorDark": "#0E0D08",
+        "backgroundImage": "https://gonativeio.s3.amazonaws.com/app_files/eekraob/1783081618725_7x4vn1knnqz3m_FFFFFF_1_2x2.png",
+        "backgroundImageDark": "https://gonativeio.s3.amazonaws.com/app_files/eekraob/1783081618736_8vxfj0mqz7t58_0E0D08_1_2x2.png",
+        "animated": false,
+        "animationLoop": "once",
+        "centerImage": "https://s3.amazonaws.com/gonativeio/app_files/eekraob/app_icon_android.png",
+        "centerImageDark": "https://s3.amazonaws.com/gonativeio/app_files/eekraob/app_icon_android.png",
+        "animation": null,
+        "animationDark": null,
+        "animationFrame": null,
+        "animationFrameDark": null
+      },
+      "android": {
+        "backgroundColor": "#FFFFFF",
+        "backgroundColorDark": "#1A100B",
+        "showSplash": true,
+        "animated": false,
+        "animationLoop": "once",
+        "launchImages": {
+          "mdpi": "https://gonativeio.s3.amazonaws.com/app_files/eekraob/1783081618865_a20p7n078epfg_180x180.png",
+          "hdpi": "https://gonativeio.s3.amazonaws.com/app_files/eekraob/1783081618875_9cjrufv9tn16c_270x270.png",
+          "xhdpi": "https://gonativeio.s3.amazonaws.com/app_files/eekraob/1783081618884_x6bvwggmudqjg_360x360.png",
+          "xxhdpi": "https://gonativeio.s3.amazonaws.com/app_files/eekraob/1783081618895_9v0yrzq2ey7be_540x540.png",
+          "xxxhdpi": "https://gonativeio.s3.amazonaws.com/app_files/eekraob/1783081618907_mmtg158zzdt7m_720x720.png"
+        },
+        "launchImagesDark": {
+          "mdpi": "https://gonativeio.s3.amazonaws.com/app_files/eekraob/1783081618934_df0y23auar9pe_180x180.png",
+          "hdpi": "https://gonativeio.s3.amazonaws.com/app_files/eekraob/1783081618958_mqb32xwatqy0a_270x270.png",
+          "xhdpi": "https://gonativeio.s3.amazonaws.com/app_files/eekraob/1783081618976_4p4mxzp5ymzju_360x360.png",
+          "xxhdpi": "https://gonativeio.s3.amazonaws.com/app_files/eekraob/1783081619016_q8eznbwunvx7a_540x540.png",
+          "xxxhdpi": "https://gonativeio.s3.amazonaws.com/app_files/eekraob/1783081619031_fj3qy11edky44_720x720.png"
+        },
+        "animation": null,
+        "animationDark": null,
+        "animationFrame": null,
+        "animationFrameDark": null
+      }
+    },
+    "iosGlassDesign": false,
+    "iosTransparentNavBar": true,
+    "iosHideNavBarOnScroll": false,
+    "iosHideTabBarOnScroll": false,
+    "androidHideNavBarOnScroll": false,
+    "androidHideTabBarOnScroll": false,
+    "iosIcon": "https://s3.amazonaws.com/gonativeio/app_files/eekraob/app_icon_android.png",
+    "customIcons": {},
+    "iosStatusBarStyle": "auto",
+    "iosEnableOverlayInStatusBar": false,
+    "androidStatusBarStyle": "auto",
+    "androidEnableOverlayInStatusBar": false,
+    "androidIcon": "https://s3.amazonaws.com/gonativeio/app_files/eekraob/app_icon_android.png",
+    "iosActivityIndicatorColor": "#808080",
+    "iosActivityIndicatorColorDark": "#808080",
+    "androidActivityIndicatorColor": "#808080",
+    "androidActivityIndicatorColorDark": "#808080",
+    "forceViewportWidth": null,
+    "initialZoom": null,
+    "pinchToZoom": null,
+    "iosDynamicType": null,
+    "navigationTitleImageLocation": "https://s3.amazonaws.com/gonativeio/app_files/eekraob/app_icon_android.png",
+    "navigationTitleImageLocationDark": "https://s3.amazonaws.com/gonativeio/app_files/eekraob/app_icon_android.png",
+    "androidHeaderImage": "https://s3.amazonaws.com/gonativeio/app_files/eekraob/app_icon_android.png",
+    "androidHeaderImageDark": "https://s3.amazonaws.com/gonativeio/app_files/eekraob/app_icon_android.png",
+    "iosHeaderImageDark": "https://s3.amazonaws.com/gonativeio/app_files/eekraob/app_icon_android.png"
+  },
+  "permissions": {
+    "usesGeolocation": false,
+    "androidDownloadToPublicStorage": false,
+    "enableWebRTCamera": false,
+    "enableWebRTCMicrophone": false,
+    "iosLocationUsageDescription": "",
+    "iosCameraUsageDescription": "",
+    "iosPhotoLibraryUsageDescription": "",
+    "iosMicrophoneUsageDescription": "",
+    "iOSATTUserTrackingDescription": "",
+    "iOSRequestATTConsentOnLoad": false
+  },
+  "developmentTools": {
+    "enableWebConsoleLogs": false
+  },
+  "services": {
+    "oneSignalV5": {
+      "active": false
+    },
+    "ads": {
+      "admob": {
+        "appId": "",
+        "interstitial": "",
+        "rewarded": "",
+        "appOpen": ""
+      },
+      "applovin": {
+        "sdkKey": "",
+        "interstitial": "",
+        "rewarded": "",
+        "appOpen": ""
+      }
+    }
+  },
+  "contextMenu": {
+    "linkActions": [
+      "copyLink",
+      "openExternal"
+    ],
+    "enabled": false
+  },
+  "allowZoom": null,
+  "security": {
+    "network": {
+      "allowInsecure": null
+    }
+  }
+}
