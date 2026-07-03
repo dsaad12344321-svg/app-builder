@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <!-- AppLovin SDK key from appConfig.json services.ads.applovin.sdkKey -->
+        <meta-data
+            android:name="applovin.sdk.key"
+            android:value="${applovin_sdk_key}" />
+    </application>
+</manifest>
